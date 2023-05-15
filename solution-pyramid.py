@@ -25,7 +25,7 @@ def build_normal_pyramid(width, sym='H'):
 
 def build_flipped_pyramid(width, sym='H'):
     
-    storage_fliped = []
+    storage_flipped = []
 
     #iterator
     a = width
@@ -37,13 +37,15 @@ def build_flipped_pyramid(width, sym='H'):
                 num_sym = sym*a
                 spaces = int(width - x)
                 row = spaces* ' ' + num_sym + spaces* ' '
-                storage_fliped.append(row)
+                storage_flipped.append(row)
                 a -= 2
                 
-            return storage_fliped
+            return storage_flipped
         
         return None
 
 n = build_normal_pyramid(13)
 m = build_flipped_pyramid(9)
+for x in m:
+    print(x)
  
