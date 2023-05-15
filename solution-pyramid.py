@@ -1,4 +1,5 @@
 
+# build pyramid 
 
 def build_normal_pyramid(width, sym='H'):
 
