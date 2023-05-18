@@ -11,7 +11,6 @@ def build_normal_pyramid(width, sym='H'):
     if 50 > width > 0:
         if width % 2 != 0:
             for x in range(1, width + 1):
-
                 num_sym = sym*a
                 spaces = int(width - x)
                 row  = ' ' * spaces + num_sym + ' ' * spaces
@@ -33,10 +32,9 @@ def build_flipped_pyramid(width, sym='H'):
     if 50 > width > 0:
         if width % 2 != 0:
             for x in reversed(range(1, width + 1)):
-                
                 num_sym = sym*a
                 spaces = int(width - x)
-                row = spaces* ' ' + num_sym + spaces* ' '
+                row = spaces * ' ' + num_sym + spaces * ' '
                 storage_flipped.append(row)
                 a -= 2
                 
@@ -44,8 +42,6 @@ def build_flipped_pyramid(width, sym='H'):
         
         return None
 
-n = build_normal_pyramid(13)
-m = build_flipped_pyramid(9)
-for x in m:
-    print(x)
- 
+b = build_normal_pyramid(23)
+
+a = build_flipped_pyramid(23)
