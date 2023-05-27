@@ -10,10 +10,10 @@ def build_normal_pyramid(width, sym='H'):
     
     if 50 > width > 0:
         if width % 2 != 0:
-            for x in range(1, width + 1):
+            while a != width + 2:
                 num_sym = sym*a
-                spaces = int(width - x)
-                row  = ' ' * spaces + num_sym + ' ' * spaces
+                l = int((width - a) / 2)
+                row = ' ' * l + num_sym + l * ' '
                 storage_normal.append(row)
                 a += 2
             
@@ -38,12 +38,15 @@ def build_flipped_pyramid(width, sym='H'):
                 a -= 2
 
                 if a < 0:
-                    print(f'\nBuilding infinite pyramids is bad, but listening to gta vice city comercials is good https://www.youtube.com/watch?v=iflwZTNcb4E\n')
+                    print(f'\nBuilding infinite pyramids is bad, but listening to gta vice city commercials is good https://www.youtube.com/watch?v=iflwZTNcb4E\n')
                     break
 
     return storage_flipped
-
-
+    
+f = build_normal_pyramid(47)
+for t in f:
+    print(t)
+    
 x = build_flipped_pyramid(47)
 for i in x:
     print(i)
